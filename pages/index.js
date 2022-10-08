@@ -10,11 +10,11 @@ export default function Home(props) {
   const players = props
   const [selected, setSelected] = useState(null)
 
-  console.log('data: ', players)
-
   return (
-    <div className={styles.container}>
-      {!selected ? <Rules setSelected = {setSelected} players = {players}/> : <Game />}
+    <div>
+      {!selected ?
+      <Rules setSelected = {setSelected} players = {players}/> :
+      <Game players = {players}/>}
     </div>
   )
 }
