@@ -1,4 +1,4 @@
-import { Card, CardContent, Avatar, Stack, Box, Paper } from "@mui/material/"
+import { Card, CardContent, Avatar, Stack, Paper } from "@mui/material/"
 import Age from './cardComponents/Age.js'
 import Height from './cardComponents/Height.js'
 import Position from './cardComponents/Position.js'
@@ -6,6 +6,7 @@ import Team from './cardComponents/Team.js'
 import Yoe from './cardComponents/Yoe.js'
 
 export default function Guess({ guess, players, selected }) {
+
   let image = players[guess] === "N/A" ?
     "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" :
     players[guess].Pic.toString()

@@ -1,4 +1,4 @@
-import { Card, CardContent, Stack, Box, Paper, Typography } from "@mui/material/"
+import { Stack, Box, Paper, Typography } from "@mui/material/"
 
 export default function Guide({ }) {
 

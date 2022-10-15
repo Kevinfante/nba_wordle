@@ -1,11 +1,6 @@
-import { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material/'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Rules from '../components/Rules.js'
-import Game from '../components/Game.js'
 import Link from 'next/link'
 
 export default function Home(props) {

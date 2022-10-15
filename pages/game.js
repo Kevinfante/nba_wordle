@@ -1,12 +1,11 @@
 import { useState } from "react";
-import MatchBox from '../components/GameComponents/MatchBox.js'
 import Guess from '../components/GameComponents/Guess.js'
 import Search from '../components/GameComponents/Search.js'
 import Random from '../components/GameComponents/Random.js'
 import Success from '../components/Success.js'
 import Fail from '../components/Fail.js'
 import Go from '../components/Road.js'
-import {Modal, Box, Button, Typography} from '@mui/material/'
+import {Modal, Box, Typography} from '@mui/material/'
 
 export default function Games(props) {
   const players = props

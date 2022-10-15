@@ -1,4 +1,4 @@
-import {Box, Stack, Paper} from "@mui/material/"
+import { Box } from "@mui/material/"
 import Image from 'next/image'
 
 

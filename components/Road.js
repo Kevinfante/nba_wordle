@@ -1,10 +1,7 @@
 import { Box, Button, Typography } from "@mui/material/"
 import Link from 'next/link'
 
-
-
 export default function Go() {
-
 
   return (
     <Box id="home-Button" s
@@ -22,4 +19,5 @@ export default function Go() {
       </Button>
     </Box>
   )
+
 }

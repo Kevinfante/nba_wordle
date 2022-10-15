@@ -1,7 +1,7 @@
-import  { Typography, Card, CardMedia, Avatar, CardContent, Box } from '@mui/material/'
+import  { Typography, Avatar, Box } from '@mui/material/'
 import Answer from './Answer.js'
-export default function Success({ player, name }) {
 
+export default function Success({ player, name }) {
 
   return (
     <Box>

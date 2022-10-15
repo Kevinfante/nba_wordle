@@ -1,7 +1,8 @@
-import  { Typography, Card, CardMedia, Avatar, CardContent, Stack, Button, Box} from '@mui/material/'
+import  { Typography, Stack, Button, Box} from '@mui/material/'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Answer from './Answer.js'
 import { useState } from 'react'
+
 export default function Fail({ player, name }) {
 
   const [reveal, setReveal] = useState(false);
