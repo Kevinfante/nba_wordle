@@ -1,34 +1,75 @@
 import { useState } from 'react';
+import { Box, Button, Typography } from '@mui/material/'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Rules from '../components/Rules.js'
 import Game from '../components/Game.js'
+import Link from 'next/link'
 
 export default function Home(props) {
 
-  const players = props
-  const [selected, setSelected] = useState(null)
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#eee8d5',
+      },
+      secondary: {
+        main: '#fdf6e3'
+      },
+    },
+  });
+
+  const buttons = {
+    height: "200%",
+    width: "350px"
+  }
 
   return (
-    <div>
-      {!selected ?
-      <Rules setSelected = {setSelected} players = {players}/> :
-      <Game players = {players}/>}
-    </div>
+    <ThemeProvider theme={theme}>
+      <Box id='homebody'
+        display="flex"
+        sx={{
+          height: "100vh",
+          width: "100vw",
+          bgcolor: "#002b36",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-evenly"
+        }}>
+        <Box>
+          <Typography
+            variant="h1"
+            sx={{ color: '#eee8d5' }}
+            align="center">
+            {`Who's that Baller!`}
+          </Typography>
+          <Typography
+            variant="h3"
+            sx={{ color: '#eee8d5' }}
+            align="center">
+            {`A wordle-inspired NBA guessing game!`}
+          </Typography>
+        </Box>
+        <Box
+          id="button container"
+          display="flex" direction="row"
+          justifyContent="space-evenly"
+          width="75%"
+          sx={{ mt: "-10%" }}>
+          <Button variant="outlined" sx={buttons}>
+            <Link href='/rules'>
+              <Typography>Rules</Typography>
+            </Link>
+          </Button>
+          <Button variant="outlined" sx={buttons} >
+            <Link href='/game'>
+              <Typography> Game </Typography>
+            </Link>
+          </Button>
+        </Box>
+      </Box>
+    </ThemeProvider>
   )
-}
-
-import fsPromises from 'fs/promises';
-import path from 'path'
-export async function getStaticProps() {
-  const filepath = path.join(process.cwd(),
-  'data.json');
-  const jsonData = await
-  fsPromises.readFile(filepath);
-  const objectData = JSON.parse(jsonData);
-
-  return {
-    props: objectData
-  }
 }
