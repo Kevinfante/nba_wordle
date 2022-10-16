@@ -103,6 +103,10 @@ export default function Search({ players, setGuessed, guessed, selected, setGame
             {...params}
             id="textArea"
             label="Select a Player"
+            InputLabelProps={{
+              style: { color: '#eee8d5' }
+            }}
+
             sx={{ color: "#eee8d5" }} />}
         />
         {error ? <Error /> : null}
