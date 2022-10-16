@@ -43,7 +43,6 @@ export default function Age ({ bday, sel }){
   return(
     <Box
     id ="age-Container"
-    font-S
     sx={{
       display: 'flex',
       justifyContent: "center",

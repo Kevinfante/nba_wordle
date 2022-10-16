@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Go() {
 
   return (
-    <Box id="home-Button" s
+    <Box id="home-Button"
       sx={{
         position: 'absolute',
         top: "0px",

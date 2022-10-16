@@ -49,20 +49,21 @@ export default function Home(props) {
         </Box>
         <Box
           id="button container"
-          display="flex" direction="row"
+          display="flex"
+          direction="row"
           justifyContent="space-evenly"
           width="75%"
           sx={{ mt: "-10%" }}>
-          <Button variant="outlined" sx={buttons}>
-            <Link href='/rules'>
+          <Link href='/rules'>
+            <Button variant="outlined" sx={buttons}>
               <Typography>Rules</Typography>
-            </Link>
-          </Button>
-          <Button variant="outlined" sx={buttons} >
-            <Link href='/game'>
+            </Button>
+          </Link>
+          <Link href='/game'>
+            <Button variant="outlined" sx={buttons} >
               <Typography> Game </Typography>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Box>
       </Box>
     </ThemeProvider>
