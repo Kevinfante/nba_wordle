@@ -16,6 +16,8 @@ export default function MyApp(props) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
+        <title>{`Who's that Baller?!`}</title>
+        <link rel="shortcut icon" href="/myLogo.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
