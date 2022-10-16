@@ -39,7 +39,7 @@ export default function Home(props) {
             variant="h1"
             sx={{ color: '#eee8d5' }}
             align="center">
-            {`Who's that Baller!`}
+            {`Who's that Baller?!`}
           </Typography>
           <Typography
             variant="h3"

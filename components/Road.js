@@ -10,13 +10,13 @@ export default function Go() {
         top: "0px",
         left: "0px"
       }}>
-      <Button>
-        <Link href="/">
+      <Link href="/">
+        <Button>
           <Typography color="#eee8d5" variant="h3">
             ⌂
           </Typography>
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </Box>
   )
 
