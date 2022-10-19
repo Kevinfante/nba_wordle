@@ -24,6 +24,11 @@ export default function Home(props) {
 
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+      <title>{`Who's that Baller?!`}</title>
+      <link rel="shortcut icon" href="/myLogo.png" />
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
       <Box id='homebody'
         display="flex"
         sx={{

@@ -1,6 +1,7 @@
 import { Button, Box, Typography } from '@mui/material/'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Go from '../Road.js'
+import Head from 'next/head'
 
 
 export default function Random({ players, setSelected }) {
@@ -36,6 +37,11 @@ export default function Random({ players, setSelected }) {
     <Box id="random"
       display="flex"
       sx={rootStyle}>
+      <Head>
+        <title>{`Who's that Baller?! | Game`}</title>
+        <link rel="shortcut icon" href="/myLogo.png" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
       <Typography
         variant="h2"
         sx={{ color: '#eee8d5' }}

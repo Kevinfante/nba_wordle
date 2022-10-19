@@ -6,6 +6,7 @@ import Success from '../components/Success.js'
 import Fail from '../components/Fail.js'
 import Go from '../components/Road.js'
 import {Modal, Box, Typography} from '@mui/material/'
+import Head from 'next/head'
 
 export default function Games(props) {
   const players = props
@@ -46,6 +47,11 @@ export default function Games(props) {
 
   return !selected ? < Random players = {props.names} setSelected = {setSelected}/> : (
     <Box id="game" sx={rootStyle}>
+      <Head>
+        <title>{`Who's that Baller?! | Game`}</title>
+        <link rel="shortcut icon" href="/myLogo.png" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
       <Search players = {players.names} setGuessed = {setGuessed} guessed = {guessed} selected = {selected} setGameState = {setGameState} setWin = {setWin} />
       {guessed.length ? <Guess guessed = {guessed} players={ players } selected = { selected }/> : null}
       <Modal
