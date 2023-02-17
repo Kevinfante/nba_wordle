@@ -14,7 +14,7 @@ export default function Answer({ player, name }) {
       <CardMedia
         component="img"
         height="200"
-        image={`https://www.basketball-reference.com/req/202106291/images/players${player.Link}`}
+        image={`https://www.basketball-reference.com/req/202106291/images/players${player.Link.slice(10, player.Link.length - 5)}.jpg`}
         alt='player image'
         sx={{ objectFit: 'contain', pt: "10%" }} />
       <Box display="flex"
