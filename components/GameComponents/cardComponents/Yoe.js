@@ -4,6 +4,8 @@ export default function Yoe ({ years, sel}){
 
   let diff = ""
 
+  years = years == "R" ? 0 : years;
+
   if(Number(years) < Number(sel)){
     diff = "▲"
   } else if (Number(years) > Number(sel)){

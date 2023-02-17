@@ -9,7 +9,7 @@ export default function Guess({ guess, players, selected }) {
 
   let image = players[guess] === "N/A" ?
     "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" :
-    players[guess].Pic.toString()
+    `https://www.basketball-reference.com/req/202106291/images/players${players[guess].link}`
 
   return (
     <Paper id="card"

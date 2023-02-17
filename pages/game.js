@@ -9,6 +9,8 @@ import {Modal, Box, Typography} from '@mui/material/'
 import Head from 'next/head'
 
 export default function Games(props) {
+  // this line should be changed to the following
+  // actually, this line might be finr
   const players = props
 
   const [selected, setSelected] = useState(null)
@@ -45,14 +47,14 @@ export default function Games(props) {
   }
 
 
-  return !selected ? < Random players = {props.names} setSelected = {setSelected}/> : (
+  return !selected ? < Random players = {Object.keys(players)} setSelected = {setSelected}/> : (
     <Box id="game" sx={rootStyle}>
       <Head>
         <title>{`Who's that Baller?! | Game`}</title>
         <link rel="shortcut icon" href="/myLogo.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <Search players = {players.names} setGuessed = {setGuessed} guessed = {guessed} selected = {selected} setGameState = {setGameState} setWin = {setWin} />
+      <Search players = {Object.keys(players)} setGuessed = {setGuessed} guessed = {guessed} selected = {selected} setGameState = {setGameState} setWin = {setWin} />
       {guessed.length ? <Guess guessed = {guessed} players={ players } selected = { selected }/> : null}
       <Modal
       open = {gameState}
@@ -67,11 +69,12 @@ export default function Games(props) {
   )
 }
 
+// here is where we grab the info from the json file
 import fsPromises from 'fs/promises';
 import path from 'path'
 export async function getStaticProps() {
   const filepath = path.join(process.cwd(),
-  'data.json');
+  'players.json');
   const jsonData = await
   fsPromises.readFile(filepath);
   const objectData = JSON.parse(jsonData);
