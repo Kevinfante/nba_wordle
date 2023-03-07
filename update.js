@@ -46,7 +46,7 @@ const teams = [
     // let currTeam = url.substr(43, 46)
     // console.log('currTeam: ', currTeam)
     const grabRoster = await page.evaluate(({ currTeam }) => {
-      console.log('currTeam: ', currTeam)
+      // console.log('currTeam: ', currTeam)
       const result = {}
       const rows = document.querySelectorAll("#roster > tbody > tr")
       rows.forEach(row => {
@@ -87,7 +87,7 @@ const teams = [
     cluster.queue(`https://www.basketball-reference.com/teams/${team}/2023.html`)
   })
 
-  await cluster.idle();
-  await cluster.close();
+  // await cluster.idle();
+  // await cluster.close();
 
 })();
